@@ -14,15 +14,16 @@ source:
 
 build:
   merge_build_host: True  # [win]
-  number: 0
+  number: 1000
+  skip: True  # [win and vc<14]
   rpaths:
     - lib/R/lib/
     - lib/
 
 requirements:
   build:
-    - {{ compiler('c') }}        # [not win]
-    - {{ compiler('cxx') }}      # [not win]
+    - {{ compiler('c') }}        # [linux or osx and c_compiler == "toolchain_c"]
+    - {{ compiler('cxx') }}      # [linux or osx and c_compiler == "toolchain_c"]
     - {{ compiler('m2w64_c') }}    # [win]
     - {{ compiler('m2w64_cxx') }}  # [win]
     - {{posix}}filesystem        # [win]
@@ -42,6 +43,7 @@ requirements:
   run:
     - r-base
     - {{native}}gcc-libs         # [win]
+    - llvm-openmp                # [osx and c_compiler == "clang"]
     - r-fd
     - r-openimager
     - r-rcpp >=0.12.5
