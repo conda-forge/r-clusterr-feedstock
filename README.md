@@ -50,10 +50,10 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>win_c_compilervs2015target_platformwin-64vc14</td>
+              <td>win_target_platformwin-64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=2378&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-clusterr-feedstock?branchName=master&jobName=win&configuration=win_c_compilervs2015target_platformwin-64vc14" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-clusterr-feedstock?branchName=master&jobName=win&configuration=win_target_platformwin-64" alt="variant">
                 </a>
               </td>
             </tr>
@@ -156,11 +156,5 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@bgruening](https://github.com/bgruening/)
-* [@cbrueffer](https://github.com/cbrueffer/)
-* [@daler](https://github.com/daler/)
-* [@dbast](https://github.com/dbast/)
-* [@dpryan79](https://github.com/dpryan79/)
-* [@jdblischak](https://github.com/jdblischak/)
-* [@johanneskoester](https://github.com/johanneskoester/)
+* [@conda-forge/r](https://github.com/conda-forge/r/)
 
