@@ -1,4 +1,4 @@
-{% set version = '1.1.9' %}
+{% set version = '1.2.0' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/ClusterR_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/ClusterR/ClusterR_{{ version }}.tar.gz
-  sha256: 5fd33e1aaa880ab8488e0602292ec1516dfcdd362f48a3821bb8ed8c9b17b850
+  sha256: a7d31cdf75e798c1a46d78fcbcb85aa1ec68f36818f67470079bea978435abd0
 
 build:
   merge_build_host: True  # [win]
@@ -21,9 +21,10 @@ build:
 
 requirements:
   build:
-    - {{ compiler('c') }}        # [not win]
-    - {{ compiler('cxx') }}      # [not win]
-    - {{native}}toolchain        # [win]
+    - {{ compiler('c') }}                # [not win]
+    - {{ compiler('m2w64_c') }}          # [win]
+    - {{ compiler('cxx') }}              # [not win]
+    - {{ compiler('m2w64_cxx') }}        # [win]
     - {{posix}}filesystem        # [win]
     - {{posix}}make
     - {{posix}}sed               # [win]
@@ -78,8 +79,8 @@ extra:
 # Package: ClusterR
 # Type: Package
 # Title: Gaussian Mixture Models, K-Means, Mini-Batch-Kmeans, K-Medoids and Affinity Propagation Clustering
-# Version: 1.1.9
-# Date: 2019-04-14
+# Version: 1.2.0
+# Date: 2019-07-16
 # Authors@R: c( person("Lampros", "Mouselimis", email = "mouselimislampros@gmail.com", role = c("aut", "cre")), person("Conrad", "Sanderson", role = "cph", comment = "Author of the C++ Armadillo library"), person("Ryan", "Curtin", role = "cph", comment = "Author of the C++ Armadillo library"), person("Siddharth", "Agrawal", role = "cph", comment = "Author of the C code of the Mini-Batch-Kmeans algorithm (https://github.com/siddharth-agrawal/Mini-Batch-K-Means)"), person("Brendan", "Frey", email = "frey@psi.toronto.edu", role = "cph", comment = "Author of the matlab code of the Affinity propagation algorithm (for commercial use please contact the author of the matlab code)"), person("Delbert", "Dueck", role = "cph", comment = "Author of the matlab code of the Affinity propagation algorithm") )
 # Maintainer: Lampros Mouselimis <mouselimislampros@gmail.com>
 # BugReports: https://github.com/mlampros/ClusterR/issues
@@ -95,7 +96,7 @@ extra:
 # VignetteBuilder: knitr
 # RoxygenNote: 6.1.0
 # NeedsCompilation: yes
-# Packaged: 2019-04-14 05:57:38 UTC; lampros
+# Packaged: 2019-07-16 05:59:27 UTC; lampros
 # Author: Lampros Mouselimis [aut, cre], Conrad Sanderson [cph] (Author of the C++ Armadillo library), Ryan Curtin [cph] (Author of the C++ Armadillo library), Siddharth Agrawal [cph] (Author of the C code of the Mini-Batch-Kmeans algorithm (https://github.com/siddharth-agrawal/Mini-Batch-K-Means)), Brendan Frey [cph] (Author of the matlab code of the Affinity propagation algorithm (for commercial use please contact the author of the matlab code)), Delbert Dueck [cph] (Author of the matlab code of the Affinity propagation algorithm)
 # Repository: CRAN
-# Date/Publication: 2019-04-14 06:42:41 UTC
+# Date/Publication: 2019-07-18 06:35:38 UTC
