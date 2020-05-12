@@ -14,7 +14,7 @@ source:
 
 build:
   merge_build_host: True  # [win]
-  number: 1
+  number: 2
   rpaths:
     - lib/R/lib/
     - lib/
@@ -39,6 +39,8 @@ requirements:
     - r-ggplot2
     - r-gmp
     - r-gtools
+    - libblas
+    - liblapack
   run:
     - r-base
     - {{ native }}gcc-libs         # [win]
@@ -57,7 +59,7 @@ test:
 
 about:
   home: https://github.com/mlampros/ClusterR
-  license: GPL-3
+  license: GPL-3.0-only
   summary: 'Gaussian mixture models, k-means, mini-batch-kmeans, k-medoids and affinity propagation
     clustering with the option to plot, validate, predict (new data) and estimate the
     optimal number of clusters. The package takes advantage of ''RcppArmadillo'' to
