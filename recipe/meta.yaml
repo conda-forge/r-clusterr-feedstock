@@ -1,4 +1,4 @@
-{% set version = "1.2.8" %}
+{% set version = "1.2.9" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/ClusterR_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/ClusterR/ClusterR_{{ version }}.tar.gz
-  sha256: b023a2c09d82a45700a94326ba24a4ea975d9c2f4dd5d8f7c666a110b15ce012
+  sha256: 63ab3fd6f1c105cd4a0f2a898902810e8455d82dc841215d60cedddfabe55a11
 
 build:
   merge_build_host: true  # [win]
