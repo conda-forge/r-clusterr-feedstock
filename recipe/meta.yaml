@@ -1,4 +1,4 @@
-{% set version = "1.3.4" %}
+{% set version = "1.3.5" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/ClusterR_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/ClusterR/ClusterR_{{ version }}.tar.gz
-  sha256: 9c9952c9294b56f5efe9c7f40b2d3f27336973da570ce65f9d9a50575e248740
+  sha256: c8bfa8726cd73d13d60d30e556466c698f002bcd831e6964c76782f01e777f16
 
 build:
   number: 0
